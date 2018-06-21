@@ -1,4 +1,5 @@
 var os = require('os');
+var colors = require('colors');
 
 function time() {
     var uptime = os.uptime();
@@ -6,7 +7,7 @@ function time() {
     var minutes = (uptime / 60).toFixed(0);
     var seconds = (uptime % 60);
 
-    console.log('Uptime: ~' + hours + ' godz. ' + minutes + ' min. ' + seconds + ' sek.');
+    console.log('Uptime: ~ '.green + hours + ' godz. ' + minutes + ' min. ' + seconds + ' sek.');
 }
 
 exports.clock = time;
